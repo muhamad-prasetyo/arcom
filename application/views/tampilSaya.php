@@ -7,6 +7,13 @@
     <title>Test Halaman</title>
 </head>
 <body>
-    <h1>ISi dari Halaman ini.</h1>
+    
+    <?php 
+        
+        print_r($dataKaryawan->nama_depan. " " . $dataKaryawan->nama_belakang);
+
+    ?>
+
+
 </body>
 </html>
