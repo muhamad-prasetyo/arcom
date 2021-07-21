@@ -80,4 +80,17 @@
             $this->load->view('login', $data);
             $this->load->view('template/footer', $data);
         }
+
+        // method prosesLogin 
+        public function prosesLogin()
+        {
+            $this->form_validation->set_rules('email', 'Email', 'required');
+            $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
+
+            if($this->form_validation->run() == false ) {
+                $this->login();
+            } else {
+                echo 'Berhasil Login.';
+            }
+        }
     }

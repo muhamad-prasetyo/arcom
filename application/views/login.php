@@ -29,7 +29,7 @@
                     <?php endif; ?>
                     <?php
                         // membuka / membuat form 
-                        echo form_open(base_url('user/prosesRegister'), ['class' => 'form-arcom']);
+                        echo form_open(base_url('user/prosesLogin'), ['class' => 'form-arcom']);
 
                         // untuk memberikaan pesan error jika form tidak disi dengan benar 
                         // echo validation_errors();
@@ -75,7 +75,7 @@
                     <!-- tombol submit atau kirim  -->
                     <?php 
 
-                        echo form_submit(['name' => 'submit', 'class' => 'btn btn-success btn-block'], 'Register');
+                        echo form_submit(['name' => 'submit', 'class' => 'btn btn-success btn-block'], 'Login');
                         
                         // menutup form 
                         echo form_close();
