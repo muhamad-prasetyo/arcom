@@ -70,6 +70,10 @@
         // method login 
         public function login()
         {
-            echo "ini adalah halaman login";
+            $data['title'] = "Login";
+
+            $this->load->view('template/header', $data);
+            $this->load->view('login', $data);
+            $this->load->view('template/footer', $data);
         }
     }
