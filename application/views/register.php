@@ -38,6 +38,7 @@
                                 $dataNamadepan = ['name' => 'nama_depan',
                                                 'id' => 'nama_depan',
                                                 'class' => 'form-control',
+                                                'value' => set_value('nama_depan'),
                                                 'placeholder' => 'Nama Depan'
                                                 ]; 
                                 echo form_input($dataNamadepan);
@@ -54,6 +55,7 @@
                                 $dataNamabelakang = ['name' => 'nama_belakang',
                                                 'id' => 'nama_belakang',
                                                 'class' => 'form-control',
+                                                'value' => set_value('nama_belakang'),
                                                 'placeholder' => 'Nama Belakang'
                                                 ]; 
                                 echo form_input($dataNamabelakang);
@@ -72,6 +74,7 @@
                                                 'id' => 'email',
                                                 // 'type' => 'email',
                                                 'class' => 'form-control',
+                                                'value' => set_value('email'),
                                                 'placeholder' => 'Email'
                                                 ]; 
                                 echo form_input($dataEmail);
@@ -89,6 +92,7 @@
                                 $dataDob = ['name' => 'dob',
                                                 'id' => 'dob',
                                                 'class' => 'form-control',
+                                                'value' => set_value('dob'),
                                                 'placeholder' => 'Tanggal Lahir'
                                                 ]; 
                                 echo form_input($dataDob);
@@ -106,6 +110,7 @@
                                 $dataAlamat = ['name' => 'alamat',
                                                 'id' => 'alamat',
                                                 'class' => 'form-control',
+                                                'value' => set_value('alamat'),
                                                 'placeholder' => 'Alamat'
                                                 ]; 
                                 echo form_input($dataAlamat);
@@ -123,6 +128,7 @@
                                 $dataTelepon = ['name' => 'nomor_telepon',
                                                 'id' => 'nomor_telepon',
                                                 'type' => 'number',
+                                                'value' => set_value('nomor_telepon'),
                                                 'class' => 'form-control',
                                                 'placeholder' => 'Masukan Nomor Telepon Rumah'
                                                 ]; 
@@ -141,6 +147,7 @@
                                 $datahp = ['name' => 'nomor_hp',
                                                 'id' => 'nomor_hp',
                                                 'type' => 'number',
+                                                'value' => set_value('nomor_hp'),
                                                 'class' => 'form-control',
                                                 'placeholder' => 'Masukan Nomor Handphone / Whatsapp'
                                                 ]; 
@@ -160,7 +167,8 @@
                                         <?php
                                             // untuk input form nama depan 
                                             $dataKelamin = ['name' => 'jenis_kelamin',
-                                                            'id' => 'jenis_kelamin'
+                                                            'id' => 'jenis_kelamin',
+                                                            'checked' => set_radio('jenis_kelamin', 'wanita')
                                                             ];
                                             echo form_radio($dataKelamin, 'Wanita');
                                         ?>
@@ -172,7 +180,8 @@
                                         <label class="radio-inline">
                                         <?php 
                                             $dataKelamin = ['name' => 'jenis_kelamin',
-                                                            'id' => 'jenis_kelamin'
+                                                            'id' => 'jenis_kelamin',
+                                                            'checked' => set_radio('jenis_kelamin', 'pria')
                                                         ];
                                             echo form_radio($dataKelamin, 'Pria')
                                         ?>

@@ -55,3 +55,4 @@ $route['404_override'] = '';
 // route untuk form register 
 $route['register'] = 'user/register';
 $route['register/proses'] = 'user/prosesRegister';
+$route['login'] = 'user/login';

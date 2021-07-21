@@ -61,6 +61,15 @@
                                 ];
 
                 $this->User_model->create($dataRegister);
+
+                redirect('login');
             }
+        }
+
+
+        // method login 
+        public function login()
+        {
+            echo "ini adalah halaman login";
         }
     }
