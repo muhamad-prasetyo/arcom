@@ -25,7 +25,7 @@
             // cek validasi pada form 
             $this->form_validation->set_rules('nama_depan', 'Nama Depan', 'required');
             $this->form_validation->set_rules('nama_belakang', 'Nama Belakang', 'required');
-            $this->form_validation->set_rules('email', 'Email', 'required');
+            $this->form_validation->set_rules('email', 'Email', 'required|is_unique[karyawan.email]');
             $this->form_validation->set_rules('dob', 'Tanggal Lahir', 'required');
             $this->form_validation->set_rules('alamat', 'Alamat', 'required');
             $this->form_validation->set_rules('nomor_telepon', 'nomor_telepon', 'required');
