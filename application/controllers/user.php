@@ -51,7 +51,7 @@
                                     'nomor_hp'          => $this->input->post('nomor_hp'),
                                     'jenis_kelamin'     => $this->input->post('jenis_kelamin'),
                                     'status_perkawinan' => $this->input->post('status_perkawinan'),
-                                    'password'          => $this->input->post('password'),
+                                    'password'          => password_hash($this->input->post('password'), PASSWORD_BCRYPT),
                                     'id_departemen'     => 1,
                                     'id_posisi'         => 1,
                                     'dibuat'            => date('Y-m-d H:i:s'),
