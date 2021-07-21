@@ -25,6 +25,9 @@
                         // membuka / membuat form 
                         echo form_open(base_url('user/prosesRegister'), ['class' => 'form-arcom']);
 
+                        // untuk memberikaan pesan error jika form tidak disi dengan benar 
+                        // echo validation_errors();
+
                     ?>
 
                     <div class="form-group row">
@@ -38,7 +41,7 @@
                                                 'placeholder' => 'Nama Depan'
                                                 ]; 
                                 echo form_input($dataNamadepan);
-
+                                echo form_error('nama_depan');
                             ?>
                         </div>
                     </div>
@@ -54,6 +57,7 @@
                                                 'placeholder' => 'Nama Belakang'
                                                 ]; 
                                 echo form_input($dataNamabelakang);
+                                echo form_error('nama_belakang');
 
                             ?>
                         </div>
@@ -66,10 +70,12 @@
                                 // untuk input form nama depan 
                                 $dataEmail = ['name' => 'email',
                                                 'id' => 'email',
+                                                // 'type' => 'email',
                                                 'class' => 'form-control',
                                                 'placeholder' => 'Email'
                                                 ]; 
                                 echo form_input($dataEmail);
+                                echo form_error('email');
 
                             ?>
                         </div>
@@ -86,6 +92,7 @@
                                                 'placeholder' => 'Tanggal Lahir'
                                                 ]; 
                                 echo form_input($dataDob);
+                                echo form_error('dob');
 
                             ?>
                         </div>
@@ -102,6 +109,7 @@
                                                 'placeholder' => 'Alamat'
                                                 ]; 
                                 echo form_input($dataAlamat);
+                                echo form_error('alamat');
 
                             ?>
                         </div>
@@ -114,10 +122,12 @@
                                 // untuk input form nama depan 
                                 $dataTelepon = ['name' => 'nomor_telepon',
                                                 'id' => 'nomor_telepon',
+                                                'type' => 'number',
                                                 'class' => 'form-control',
                                                 'placeholder' => 'Masukan Nomor Telepon Rumah'
                                                 ]; 
                                 echo form_input($dataTelepon);
+                                echo form_error('nomor_telepon');
 
                             ?>
                         </div>
@@ -130,10 +140,12 @@
                                 // untuk input form nama depan 
                                 $datahp = ['name' => 'nomor_hp',
                                                 'id' => 'nomor_hp',
+                                                'type' => 'number',
                                                 'class' => 'form-control',
                                                 'placeholder' => 'Masukan Nomor Handphone / Whatsapp'
                                                 ]; 
                                 echo form_input($datahp);
+                                echo form_error('nomor_hp');
 
                             ?>
                         </div>
@@ -169,8 +181,39 @@
                                     </div>
                                
                             </div>
+                            <?php echo form_error('jenis_kelamin'); ?>
                         </div>
                     </div>
+
+                    <!-- menambahkan fitur status_perkawinan -->
+                    <div class="form-group row">
+                        <label for="status_perkawinan" class="col-3">Status Perkawinan</label>
+                            <div class="col-9">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label class="dropdown-inline">
+                                        <?php
+                                            // untuk input form nama depan 
+                                            $dataKelamin = ['name' => 'status_perkawinan',
+                                                            'id' => 'status_perkawinan'
+                                                            ];
+
+                                            $options = [
+                                                            'Menikah' => 'Menikah',
+                                                            'Lajang' => 'Belum Menikah',
+                                                            'Duda' => 'Duda',
+                                                            'Janda' => 'Janda'
+                                                       ];
+                                            echo form_dropdown($dataKelamin, $options,);
+                                            
+                                        ?>
+                                        
+                                        </label>
+                                    </div>
+                                </div>
+                                <?php echo form_error('status_perkawinan'); ?>
+                            </div>
+                        </div>
 
                     <div class="form-group row">
                         <label for="password" class="col-3">Password</label>
@@ -183,6 +226,7 @@
                                                 'placeholder' => 'Password'
                                                 ]; 
                                 echo form_password($dataPassword);
+                                echo form_error('password');
 
                             ?>
                         </div>
@@ -199,6 +243,7 @@
                                                 'placeholder' => 'Konfirmasi Password'
                                                 ]; 
                                 echo form_password($data2endPass);
+                                echo form_error('password');
 
                             ?>
                         </div>
