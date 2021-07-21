@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 py-3">
             <h2>Sistem Perusahaan Arcom</h2>
             <h3>Pengelolaan Karyawan & Digital Absensi</h3>
 
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 py-3">
             <div class="card frame-form-arcom">
 
                 <div class="card-header">Daftar Interview</div>
