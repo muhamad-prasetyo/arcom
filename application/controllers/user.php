@@ -6,6 +6,7 @@
         {
             parent::__construct();
 
+            $this->load->library('password');
             $this->load->model('User_model');
         }
 
@@ -51,7 +52,7 @@
                                     'nomor_hp'          => $this->input->post('nomor_hp'),
                                     'jenis_kelamin'     => $this->input->post('jenis_kelamin'),
                                     'status_perkawinan' => $this->input->post('status_perkawinan'),
-                                    'password'          => password_hash($this->input->post('password'), PASSWORD_BCRYPT),
+                                    'password'          => $this->password->hash($this->input->post('password')),
                                     'id_departemen'     => 1,
                                     'id_posisi'         => 1,
                                     'dibuat'            => date('Y-m-d H:i:s'),
