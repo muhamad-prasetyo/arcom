@@ -22,6 +22,12 @@
                 <div class="card-body">
 
                     <?php
+                        // cek apakah login berhasil q
+                        if($this->session->flashdata('pesan')) : ?>
+                    <!-- menampilkan notif pada login jika berhasil -->
+                        <div class="alert alert-success"><?= $this->session->flashdata('pesan'); ?></div>
+                    <?php endif; ?>
+                    <?php
                         // membuka / membuat form 
                         echo form_open(base_url('user/prosesRegister'), ['class' => 'form-arcom']);
 

@@ -62,6 +62,10 @@
 
                 $this->User_model->create($dataRegister);
 
+                // untuk menampilkan notif jika berhasil membuat akun 
+                $dataPesan = ['pesan' => 'Akun anda berhasil dibuat'];
+                $this->session->set_flashdata($dataPesan);
+
                 redirect('login');
             }
         }
