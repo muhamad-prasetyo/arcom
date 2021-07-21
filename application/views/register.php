@@ -243,7 +243,7 @@
                                                 'placeholder' => 'Konfirmasi Password'
                                                 ]; 
                                 echo form_password($data2endPass);
-                                echo form_error('password');
+                                echo form_error('konfirmasi_password');
 
                             ?>
                         </div>
