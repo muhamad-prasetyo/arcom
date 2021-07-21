@@ -5,6 +5,8 @@
         public function __construct()
         {
             parent::__construct();
+
+            $this->load->model('User_model');
         }
 
 
@@ -26,7 +28,7 @@
             $this->form_validation->set_rules('email', 'Email', 'required');
             $this->form_validation->set_rules('dob', 'Tanggal Lahir', 'required');
             $this->form_validation->set_rules('alamat', 'Alamat', 'required');
-            $this->form_validation->set_rules('email', 'Email', 'required');
+            $this->form_validation->set_rules('nomor_telepon', 'nomor_telepon', 'required');
             $this->form_validation->set_rules('nomor_hp', 'Nomor HP', 'required');
             $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required');
             $this->form_validation->set_rules('status_perkawinan', 'Status Perkawinan', 'required');
@@ -37,6 +39,27 @@
                 $this->register();
             } else {  
                 // nanti disimpan ke database 
+
+                // data form yg akan dikirim ke database 
+                $dataRegister = [
+                                    'nama_depan'        => $this->input->post('nama_depan'),
+                                    'nama_belakang'     => $this->input->post('nama_belakang'),
+                                    'email'             => $this->input->post('email'),
+                                    'dob'               => $this->input->post('dob'),
+                                    'alamat'            => $this->input->post('alamat'),
+                                    'nomor_telepon'     => $this->input->post('nomor_telepon'),
+                                    'nomor_hp'          => $this->input->post('nomor_hp'),
+                                    'jenis_kelamin'     => $this->input->post('jenis_kelamin'),
+                                    'status_perkawinan' => $this->input->post('status_perkawinan'),
+                                    'password'          => $this->input->post('password'),
+                                    'id_departemen'     => 1,
+                                    'id_posisi'         => 1,
+                                    'dibuat'            => date('Y-m-d H:i:s'),
+                                    'diganti'           => date('Y-m-d H:i:s'),
+                                    'status'            => 'interview'
+                                ];
+
+                $this->User_model->create($dataRegister);
             }
         }
     }
