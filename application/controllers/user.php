@@ -26,7 +26,7 @@
             // cek validasi pada form 
             $this->form_validation->set_rules('nama_depan', 'Nama Depan', 'required');
             $this->form_validation->set_rules('nama_belakang', 'Nama Belakang', 'required');
-            $this->form_validation->set_rules('email', 'Email', 'required|is_unique[karyawan.email]');
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[karyawan.email]');
             $this->form_validation->set_rules('dob', 'Tanggal Lahir', 'required');
             $this->form_validation->set_rules('alamat', 'Alamat', 'required');
             $this->form_validation->set_rules('nomor_telepon', 'nomor_telepon', 'required');
@@ -40,7 +40,6 @@
                 $this->register();
             } else {  
                 // nanti disimpan ke database 
-
                 // data form yg akan dikirim ke database 
                 $dataRegister = [
                                     'nama_depan'        => $this->input->post('nama_depan'),
@@ -67,6 +66,7 @@
                 $this->session->set_flashdata($dataPesan);
 
                 redirect('login');
+                exit();
             }
         }
 
@@ -89,7 +89,7 @@
         // method prosesLogin 
         public function prosesLogin()
         {
-            $this->form_validation->set_rules('email', 'Email', 'required');
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
             $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
 
             $email = $this->input->post('email');
@@ -98,6 +98,7 @@
             if($this->form_validation->run() == false ) {
                 $this->login();
             } 
+                // jika id dan password tidak kosong dan tidak sama dengan data di database 
             elseif($this->form_validation->run() != null && $this->form_validation->run() != $this->User_model->login($email)) {
                 $dataDanger = [
                                 'notif' => 'Email atau Password belom tersedia!',
@@ -111,8 +112,7 @@
 
                 
             }
-            elseif( $this->form_validation->run() === true )
-            {
+            elseif($this->form_validation->run() === true ){
                 $email = $this->input->post('email');
                 $password = $this->input->post('password');
 
@@ -120,7 +120,7 @@
 
                 if($this->password->verify($password, $user->password)) {
                     // jika password benar 
-                    //buat session 
+                    // buat session 
                     $dataLogin = [
                                     'logged_in'     => TRUE,
                                     'user_id'       => $user->id,
@@ -129,6 +129,8 @@
                                  ];
                     // untuk mwlihat data session ini perhatikan pada method login diatas 
                     $this->session->set_userdata($dataLogin);
+
+                    redirect('dashboard');
 
                 } else {
 
