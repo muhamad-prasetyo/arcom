@@ -77,9 +77,9 @@
             $data['title'] = "Login";
 
             // untuk melihat data session secara array ketika berhasil login 
-            print_r($this->session->userdata());
+            // print_r($this->session->userdata());
             // untuk melihat session secara satu field atau bukan array 
-            echo $this->session->userdata('nama_depan');
+            // echo $this->session->userdata('nama_depan');
 
             $this->load->view('template/header', $data);
             $this->load->view('login', $data);
