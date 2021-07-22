@@ -1,8 +1,8 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 py-3">
-            <h2>Sistem Perusahaan Arcom</h2>
-            <h3>Pengelolaan Karyawan & Digital Absensi</h3>
+    <div class="row h-75 align-items-center">
+        <div class="col-md-7">
+            <h2 class="title-register">Sistem Perusahaan Arcom</h2>
+            <h3 class="title-register">Pengelolaan Karyawan & Digital Absensi</h3>
 
             <div class="akses-button">
                 <?php 
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="col-md-6 py-3">
+        <div class="col-md-5">
             <div class="card frame-form-arcom">
 
                 <div class="card-header">Login</div>

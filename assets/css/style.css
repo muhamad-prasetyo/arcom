@@ -1,0 +1,10 @@
+/* file style ini digunakan untuk meload seluruh folder beserta file css yang sudah dimport. */
+/* Jadi file yang akan diload atau dijalankan ialah file style.css saja  */
+/* STYLE.CSS INI FILE UTAMA  */
+
+/* Folder Halaman  */
+@import 'halaman/akses.css';
+
+/* Folder Komponen   */
+@import 'komponen/form.css';
+@import 'komponen/main.css';
