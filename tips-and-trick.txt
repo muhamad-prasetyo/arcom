@@ -1,1 +1,20 @@
-hello
+Untuk Error pada validasi password dan ingin mengggunakan code yang simple dan rapih. maka bisa gunakan code ini untuk pada file user.php dan method prosesLogin(). 
+sebagai berikut:
+
+    public function prosesLogin() {
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
+				
+				if($this->form_validation->run() == false) {
+						$this->login();
+				} else {
+						
+						$email = $this->input->post('email');
+						$password = $this->input->pot('password');
+						
+						$user = $this->User_model->login($email);
+						
+						// cek validasi clean code 
+						$passwordHash = $user->password ?? false;
+				}
+    }
