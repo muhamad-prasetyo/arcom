@@ -17,7 +17,6 @@
 
             $this->load->view('template/header', $data);
             $this->load->view('register', $data);
-            $this->load->view('template/footer', $data);
         }
 
         // method untuk proses registrasi form 
@@ -83,7 +82,6 @@
 
             $this->load->view('template/header', $data);
             $this->load->view('login', $data);
-            $this->load->view('template/footer', $data);
         }
 
         // method prosesLogin 
