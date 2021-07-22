@@ -76,6 +76,11 @@
         {
             $data['title'] = "Login";
 
+            // untuk melihat data session secara array ketika berhasil login 
+            print_r($this->session->userdata());
+            // untuk melihat session secara satu field atau bukan array 
+            echo $this->session->userdata('nama_depan');
+
             $this->load->view('template/header', $data);
             $this->load->view('login', $data);
             $this->load->view('template/footer', $data);
@@ -115,7 +120,16 @@
 
                 if($this->password->verify($password, $user->password)) {
                     // jika password benar 
-                    echo "berhasil Login";
+                    //buat session 
+                    $dataLogin = [
+                                    'logged_in'     => TRUE,
+                                    'user_id'       => $user->id,
+                                    'nama_depan'    =>$user->nama_depan,
+                                    'nama_belakang' =>$user->nama_belakang
+                                 ];
+                    // untuk mwlihat data session ini perhatikan pada method login diatas 
+                    $this->session->set_userdata($dataLogin);
+
                 } else {
 
                     // jika password salah maka jalankan 
