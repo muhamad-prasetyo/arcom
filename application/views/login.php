@@ -6,9 +6,11 @@
 
             <div class="akses-button">
                 <?php 
-                    $dataAnchor =  ['class' => 'btn btn-outline-primary'];
-                    echo anchor('user/login', 'LOGIN', $dataAnchor);
-                    echo anchor('user/register', 'REGISTER', ['class' => 'btn btn-primary']);
+                    $dataAnchor =  ['class' => 'btn btn-outline-success mr-2 active'];
+                    echo anchor('login', 'LOGIN', $dataAnchor);
+                    
+                    
+                    echo anchor('register', 'REGISTER', ['class' => 'btn btn-info']);
 
                 ?>
             </div>

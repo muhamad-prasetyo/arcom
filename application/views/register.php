@@ -1,20 +1,20 @@
 <div class="container">
-    <div class="row">
+    <div class="row h-70 align-items-center">
         <div class="col-md-6 py-3">
-            <h2>Sistem Perusahaan Arcom</h2>
-            <h3>Pengelolaan Karyawan & Digital Absensi</h3>
+            <h2>Pendaftaran Calon Karyawan </h2>
+            <h3>Pengelola Karyawan & Digital Absensi</h3>
 
             <div class="akses-button">
                 <?php 
-                    $dataAnchor =  ['class' => 'btn btn-outline-primary'];
-                    echo anchor('user/login', 'LOGIN', $dataAnchor);
-                    echo anchor('user/register', 'REGISTER', ['class' => 'btn btn-primary']);
+                    $dataAnchor =  ['class' => 'btn btn-outline-success mr-2'];
+                     echo anchor('login', 'LOGIN', $dataAnchor);                
+                     echo anchor('register', 'REGISTER', ['class' => 'btn btn-outline-info active']);
 
                 ?>
             </div>
         </div>
 
-        <div class="col-md-6 py-3">
+        <div class="col-md-6 mt-4 mb-3">
             <div class="card frame-form-arcom">
 
                 <div class="card-header">Daftar Interview</div>
