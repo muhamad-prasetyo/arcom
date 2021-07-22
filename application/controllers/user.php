@@ -87,10 +87,52 @@
             $this->form_validation->set_rules('email', 'Email', 'required');
             $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
 
+            $email = $this->input->post('email');
+
+            // cek validasi email dan password 
             if($this->form_validation->run() == false ) {
                 $this->login();
-            } else {
-                echo 'Berhasil Login.';
+            } 
+            elseif($this->form_validation->run() != null && $this->form_validation->run() != $this->User_model->login($email)) {
+                $dataDanger = [
+                                'notif' => 'Email atau Password belom tersedia!',
+                                'alert' => 'alert-danger'
+                              ];
+                $this->session->set_flashdata($dataDanger);
+
+                redirect('login');
+                exit();
+                
+
+                
+            }
+            elseif( $this->form_validation->run() === true )
+            {
+                $email = $this->input->post('email');
+                $password = $this->input->post('password');
+
+                $user = $this->User_model->login($email);
+
+                if($this->password->verify($password, $user->password)) {
+                    // jika password benar 
+                    echo "berhasil Login";
+                } else {
+
+                    // jika password salah maka jalankan 
+                    $dataDanger = [
+                        'notif' => 'Password Salah!',
+                        'alert' => 'alert-danger'
+                      ];
+                        $this->session->set_flashdata($dataDanger);
+
+                        redirect('login');
+                        exit();
+                    
+                }
+            }
+            else {
+
+                echo "Silahkan Daftar terlebih dahulu";
             }
         }
     }

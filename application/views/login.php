@@ -22,14 +22,24 @@
                 <div class="card-body">
 
                     <?php
-                        // cek apakah login berhasil q
+                        // cek apakah akun berhasil dibuat
                         if($this->session->flashdata('pesan')) : ?>
                     <!-- menampilkan notif pada login jika berhasil -->
                         <div class="alert alert-success"><?= $this->session->flashdata('pesan'); ?></div>
                     <?php endif; ?>
+
+                    <?php
+                        // cek apakah user login dengan data yg sesuai database 
+                        if($this->session->flashdata('notif')) :
+                    ?>
+                        <div class="alert <?= $this->session->flashdata('alert'); ?>">
+                            <?= $this->session->flashdata('notif'); ?>
+                        </div>
+                    <?php endif; ?>
+
                     <?php
                         // membuka / membuat form 
-                        echo form_open(base_url('user/prosesLogin'), ['class' => 'form-arcom']);
+                        echo form_open(base_url('login/proses'), ['class' => 'form-arcom']);
 
                         // untuk memberikaan pesan error jika form tidak disi dengan benar 
                         // echo validation_errors();

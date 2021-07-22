@@ -23,7 +23,7 @@
 
                     <?php
                         // membuka / membuat form 
-                        echo form_open(base_url('user/prosesRegister'), ['class' => 'form-arcom']);
+                        echo form_open(base_url('register/proses'), ['class' => 'form-arcom']);
 
                         // untuk memberikaan pesan error jika form tidak disi dengan benar 
                         // echo validation_errors();
