@@ -75,7 +75,4 @@ Development pada Code dan Project ARcom/
 
 kalian klik pada file tips and trick 
 
-<<<<<<< HEAD
-=======
-jika 
->>>>>>> fd10d313d0c511914fcd3609f6cc22e3daaea75d
+
