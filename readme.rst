@@ -65,17 +65,13 @@ or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
 
 
 ***************
-<<<<<<< HEAD
+
 TIPS TRICK
-=======
-TIPS
->>>>>>> fd10d313d0c511914fcd3609f6cc22e3daaea75d
+
 ***************
+
 Development pada Code dan Project ARcom/
 
 kalian klik pada file tips and trick 
 
-<<<<<<< HEAD
-=======
-jika 
->>>>>>> fd10d313d0c511914fcd3609f6cc22e3daaea75d
+
