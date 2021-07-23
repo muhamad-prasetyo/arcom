@@ -14,8 +14,8 @@
 
             $data['title'] = 'Dashboard';
             
-            $this->load->view('template/header', $data);
-            $this->load->view('pages/dashboard', $data);
-            $this->load->view('template/footer', $data);
+            $this->load->view('template/dashboard/header', $data);
+            $this->load->view('template/dashboard/body', $data);
+            $this->load->view('template/dashboard/footer', $data);
         }
     }
