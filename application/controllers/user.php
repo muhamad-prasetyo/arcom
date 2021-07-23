@@ -22,7 +22,7 @@
             $data['title'] = "Register";
 
             $this->load->view('template/header', $data);
-            $this->load->view('register', $data);
+            $this->load->view('pages/register', $data);
         }
 
         // method untuk proses registrasi form 
@@ -99,7 +99,7 @@
             // echo $this->session->userdata('nama_depan');
 
             $this->load->view('template/header', $data);
-            $this->load->view('login', $data);
+            $this->load->view('pages/login', $data);
         }
 
         // method prosesLogin 
