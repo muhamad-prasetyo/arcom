@@ -174,4 +174,13 @@
                 echo "Silahkan Daftar terlebih dahulu";
             }
         }
+
+        public function logout()
+        {
+            $dataLogin = ['logged_in', 'user_id', 'nama_depan', 'nama_belakang'];
+
+            $this->session->unset_userdata($dataLogin);
+
+            redirect('login');
+        }
     }

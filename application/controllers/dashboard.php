@@ -10,6 +10,8 @@
         public function index()
         {
 
+            print_r($this->session->userdata());
+
             $data['title'] = 'Dashboard';
             
             $this->load->view('template/header', $data);
