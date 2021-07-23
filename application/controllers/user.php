@@ -21,7 +21,7 @@
 
             $data['title'] = "Register";
 
-            $this->load->view('template/header', $data);
+            $this->load->view('template/home/header', $data);
             $this->load->view('pages/register', $data);
         }
 
@@ -98,7 +98,7 @@
             // untuk melihat session secara satu field atau bukan array 
             // echo $this->session->userdata('nama_depan');
 
-            $this->load->view('template/header', $data);
+            $this->load->view('template/home/header', $data);
             $this->load->view('pages/login', $data);
         }
 
