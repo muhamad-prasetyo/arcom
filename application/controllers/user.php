@@ -13,6 +13,12 @@
 
         public function register()
         {
+            // cek jika sudah login 
+             if($this->session->userdata('logged_in'))
+             {
+                 redirect('dashboard');
+             }
+
             $data['title'] = "Register";
 
             $this->load->view('template/header', $data);
@@ -22,6 +28,12 @@
         // method untuk proses registrasi form 
         public function prosesRegister()
         {
+            // cek jika sudah login 
+            if($this->session->userdata('logged_in'))
+            {
+                redirect('dashboard');
+            }
+
             // cek validasi pada form 
             $this->form_validation->set_rules('nama_depan', 'Nama Depan', 'required');
             $this->form_validation->set_rules('nama_belakang', 'Nama Belakang', 'required');
@@ -73,6 +85,12 @@
         // method login 
         public function login()
         {
+            // cek jika sudah login 
+            if($this->session->userdata('logged_in'))
+            {
+                redirect('dashboard');
+            }
+
             $data['title'] = "Login";
 
             // untuk melihat data session secara array ketika berhasil login 
@@ -87,6 +105,13 @@
         // method prosesLogin 
         public function prosesLogin()
         {
+
+            // cek jika sudah login 
+            if($this->session->userdata('logged_in'))
+            {
+                redirect('dashboard');
+            }
+
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
             $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
 
