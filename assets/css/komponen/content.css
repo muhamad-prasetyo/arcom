@@ -4,4 +4,28 @@
     top: 0px;
     width: calc(100% - 250px);
     min-height: 100vh;
+    transition: all 0.3s;
 }
+
+#content.layarPenuh {
+    width: 100%;
+}
+
+.logo-dashboard {
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 5px;
+    color: #111;
+    margin-left: 10px;
+}
+
+.navbar {
+    padding: 15px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+#sidebarCollapse{
+    box-shadow: none;
+}
+

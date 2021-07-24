@@ -4,6 +4,11 @@
     top: 0;
     left: 0;
     height: 100vh;
+    transition: all 0.3s;
+}
+
+nav.bg-color {
+    background-color: rgb(255, 117, 142);
 }
 
 ul.menu {
@@ -25,4 +30,8 @@ ul.menu li a:hover {
 
 ul.menu li.active > a{
     background: #386285;
+}
+
+#sidebar.tutup{
+    margin-left: -250px;
 }

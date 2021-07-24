@@ -1,28 +1,27 @@
 <div class="dashboard">
-        <nav id="sidebar" class="bg-dark">
-            <ul class="menu">
-                <li><?= anchor('dashboard', 'Dashboard'); ?></li>
-                <li><?= anchor('dashboard/karyawan', 'Karyawan'); ?></li>
-                <li><?= anchor('dashboard/gaji-dan-tunjangan', 'Gaji & Tunjangan'); ?></li>
-                <li><?= anchor('dashboard/absensi', 'Absensi'); ?></li>
-                <li><?= anchor('dashboard/posisi', 'Posisi'); ?></li>
-                <li><?= anchor('dashboard/departemen', 'Departemen'); ?></li>
-                <li><?= anchor('logout', 'Logout'); ?></li>
-            </ul>
+    <nav id="sidebar" class="bg-color">
+        <ul class="menu">
+            <li><?php echo anchor('dashboard', 'Dashboard'); ?></li>
+            <li><?php echo anchor('dashboard/karyawan', 'Karyawan'); ?></li>
+            <li><?php echo anchor('dashboard/gaji-&-tunjangan', 'Gaji & Insentif'); ?></li>
+            <li><?php echo anchor('dashboard/absensi', 'Absensi'); ?></li>
+            <li><?php echo anchor('dashboard/posisi', 'Posisi'); ?></li>
+            <li><?php echo anchor('dashboard/departemen', 'Departemen'); ?></li>
+            <li><?php echo anchor('logout', 'Logout'); ?></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <nav class="navbar navbar-expand bg-light">
+            <button type="button" id="sidebarCollapse" class="btn btn-outline-dark">
+                <i class="fa fa-align-justify"></i>
+            </button>
+
+            <a class="navbar-brand logo-dashboard" href="#">ARCOM</a>
         </nav>
 
-        <div id="content">
-            <nav class="navbar navbar-expand bg-light">
-                <button type="button" id="sidebarCollapse" class="btn btn-outline-dark">
-                    <i class="fa fa-align-justify"></i>
-                </button>
-
-                <a href="#" class="navbar-brand logo-dashboard">ARCOM</a>
-            </nav>
-
-            <div class="container-fluid">
-                <!-- INI ADALAH CONTENT -->
-            </div>
+        <div class="container-fluid">
+            <!-- INI ADALAH ISI KONTENT  -->
         </div>
-
     </div>
+</div>
