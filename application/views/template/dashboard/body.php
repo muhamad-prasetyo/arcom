@@ -7,9 +7,8 @@
             <li><?php echo anchor('dashboard/absensi', 'Absensi'); ?></li>
             <li><?php echo anchor('dashboard/posisi', 'Posisi'); ?></li>
             <li><?php echo anchor('dashboard/departemen', 'Departemen'); ?></li>
-            <li><?php echo anchor('logout', 'Logout'); ?></li>
             <li>
-                <a href="#administrasi" class="dropdown-toggle dropdown-sidebar-arcom" data-toggle="collapse"> 
+                <a href="#administrasi" aria-expanded="false" class="dropdown-toggle dropdown-sidebar-arcom" data-toggle="collapse"> 
                     Administrasi
                 </a> 
 
@@ -17,6 +16,7 @@
                     <li><?php echo anchor('dashboard/kategory', 'Kategori'); ?></li>
                 </ul>
             </li>
+            <li><?php echo anchor('logout', 'Logout'); ?></li>
         </ul>
     </nav>
 

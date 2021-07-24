@@ -26,7 +26,7 @@ ul.menu li a {
 }
 
 ul.menu li a:hover {
-    background: #364870;
+    background: rgb(190, 89, 106);
 }
 
 ul.menu li.active > a{
@@ -47,4 +47,8 @@ a.dropdown-sidebar-arcom::after {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+a.dropdown-sidebar-arcom[aria-expanded='true'] {
+    background: rgb(134, 53, 66);
 }
