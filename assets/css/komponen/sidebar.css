@@ -52,3 +52,9 @@ a.dropdown-sidebar-arcom::after {
 a.dropdown-sidebar-arcom[aria-expanded='true'] {
     background: rgb(134, 53, 66);
 }
+
+/* menu dropdown  */
+ul ul li a{
+    background: rgb(134, 53, 66);
+    padding-left: 40px !important;
+}
