@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/halaman/dashboard.css?1j3434234ijiji'); ?>">
     
-    <script src="<?php echo base_url('assets/js/jquery-3.6.0.min.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/script.js') ?>"></script>
 </head>
 <body>
 

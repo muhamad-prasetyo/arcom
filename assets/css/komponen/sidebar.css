@@ -11,6 +11,7 @@ nav.bg-color {
     background-color: rgb(253, 95, 124);
 }
 
+
 ul.menu {
     list-style: none;
     padding: 0;
@@ -35,3 +36,4 @@ ul.menu li.active > a{
 #sidebar.tutup{
     margin-left: -250px;
 }
+

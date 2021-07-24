@@ -1,7 +1,8 @@
     
-    <footer class="navbar bg-info navbar-dark">
-        <span class="ml-auto color-white text-white">@Arcom</span>
-    </footer>
-
+    
+    
+    <script src="<?php echo base_url('assets/js/jquery-3.6.0.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/js/script.js') ?>"></script>
+    <script src="<?php echo base_url('assets/boostrap/js/bootstrap.min.js') ?>"></script>
 </body>
 </html>
