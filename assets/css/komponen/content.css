@@ -1,0 +1,7 @@
+#content {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+}

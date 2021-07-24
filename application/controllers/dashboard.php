@@ -10,7 +10,7 @@
         public function index()
         {
 
-            print_r($this->session->userdata());
+            // print_r($this->session->userdata());
 
             $data['title'] = 'Dashboard';
             
