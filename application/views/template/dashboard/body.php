@@ -9,7 +9,7 @@
             <li><?php echo anchor('dashboard/departemen', 'Departemen'); ?></li>
             <li><?php echo anchor('logout', 'Logout'); ?></li>
             <li>
-                <a href="#administrasi" class="dropdown-toggle" data-toggle="collapse"> 
+                <a href="#administrasi" class="dropdown-toggle dropdown-sidebar-arcom" data-toggle="collapse"> 
                     Administrasi
                 </a> 
 

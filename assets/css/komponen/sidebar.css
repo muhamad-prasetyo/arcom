@@ -37,3 +37,14 @@ ul.menu li.active > a{
     margin-left: -250px;
 }
 
+a.dropdown-sidebar-arcom {
+    position: relative;
+}
+
+a.dropdown-sidebar-arcom::after {
+    position: absolute;
+    display: block;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
