@@ -30,7 +30,7 @@ ul.menu li a:hover {
 }
 
 ul.menu li.active > a{
-    background: #386285;
+    background: green!important;
 }
 
 #sidebar.tutup{

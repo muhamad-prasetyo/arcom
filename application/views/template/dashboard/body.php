@@ -1,12 +1,12 @@
 <div class="dashboard">
     <nav id="sidebar" class="bg-color">
         <ul class="menu">
-            <li class="<?php if($this->router->fetch_class() == 'dashboard') { echo "active";} ?>"><?php echo anchor('dashboard', 'Dashboard'); ?></li>
-            <li class="<?php if($this->router->fetch_class() == 'karyawan') { echo "active";} ?>"><?php echo anchor('karyawan', 'Karyawan'); ?></li>
-            <li class="<?php if($this->router->fetch_class() == 'gaji-&-tunjangan') { echo "active"; }?>"><?php echo anchor('dashboard/gaji-&-tunjangan', 'Gaji & Insentif'); ?></li>
-            <li class="<?php if($this->router->fetch_class() == 'absensi') { echo "active"; }?>"><?php echo anchor('dashboard/absensi', 'Absensi'); ?></li>
-            <li class="<?php if($this->router->fetch_class() == 'posisi') { echo "active"; }?>"><?php echo anchor('dashboard/posisi', 'Posisi'); ?></li>
-            <li class="<?php if($this->router->fetch_class() == 'departemen') { echo "active"; }?>"><?php echo anchor('dashboard/departemen', 'Departemen'); ?></li>
+            <li class="<?php echo menuAktif('dashboard'); ?>"><?php echo anchor('dashboard', 'Dashboard'); ?></li>
+            <li class="<?php echo menuAktif('karyawan'); ?>"><?php echo anchor('karyawan', 'Karyawan'); ?></li>
+            <li class="<?php echo menuAktif('gaji-&-tunjangan');?>"><?php echo anchor('dashboard/gaji-&-tunjangan', 'Gaji & Insentif'); ?></li>
+            <li class="<?php echo menuAktif('absensi');?>"><?php echo anchor('dashboard/absensi', 'Absensi'); ?></li>
+            <li class="<?php echo menuAktif('posisi');?>"><?php echo anchor('dashboard/posisi', 'Posisi'); ?></li>
+            <li class="<?php echo menuAktif('departemen');?>"><?php echo anchor('dashboard/departemen', 'Departemen'); ?></li>
             <li>
                 <a href="#administrasi" aria-expanded="false" class="dropdown-toggle dropdown-sidebar-arcom" data-toggle="collapse"> 
                     Administrasi
