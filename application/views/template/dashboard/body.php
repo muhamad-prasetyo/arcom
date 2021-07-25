@@ -1,3 +1,4 @@
+<?php $this->load->view('template/dashboard/header', $title); ?>
 <div class="dashboard">
     <nav id="sidebar" class="bg-color">
         <ul class="menu">
@@ -37,3 +38,4 @@
         </div>
     </div>
 </div>
+<?php $this->load->view('template/dashboard/footer'); ?>
