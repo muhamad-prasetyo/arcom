@@ -14,9 +14,7 @@
                 </a> 
 
                 <ul id="administrasi" class="collapse menu">
-                    <li><?php echo anchor('dashboard/kategory', 'Kategori'); ?></li>
-                    <li><?php echo anchor('dashboard/kategory', 'Tip Karyawan'); ?></li>
-                    <li><?php echo anchor('dashboard/kategory', 'expamle'); ?></li>
+                    <li><?php echo anchor('dashboard/administrasi/kategori', 'Kategori'); ?></li>
                 </ul>
             </li>
             <li><?php echo anchor('logout', 'Logout'); ?></li>
@@ -33,7 +31,7 @@
         </nav>
 
         <div class="container-fluid">
-            <?php echo $this->router->fetch_class(); ?>
+           <h3> <?php echo $title; ?></h3>
             <!-- //* INI ADALAH ISI KONTENT  -->
         </div>
     </div>

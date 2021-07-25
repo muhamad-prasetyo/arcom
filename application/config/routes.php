@@ -60,4 +60,8 @@ $route['login/proses'] = 'user/prosesLogin';
 $route['logout'] = 'user/logout';
 
 // * Route untuk Halaman Dashboard (SETELAH LOGIN) 
+// Karyawan 
 $route['dashboard/karyawan'] = 'karyawan/index';
+
+// Kategori
+$route['dashboard/administrasi/kategori'] = 'kategori/index';
