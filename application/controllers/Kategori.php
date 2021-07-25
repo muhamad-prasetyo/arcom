@@ -11,7 +11,21 @@
         {
             
             $data['title'] = 'Kategory';
+            $data['kontenDinamis'] = 'pages/kategori/list';
 
             $this->load->view('template/dashboard/body', $data);
+        }
+
+        public function create()
+        {
+            $data['title'] = 'Kategori';
+            $data['kontenDinamis'] = 'pages/kategori/form';
+
+            $this->load->view('template/dashboard/body', $data);
+        }
+
+        public function store()
+        {
+            echo "data akan disimpan disini";
         }
     }

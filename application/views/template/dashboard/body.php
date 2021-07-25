@@ -31,8 +31,10 @@
         </nav>
 
         <div class="container-fluid">
-           <h3> <?php echo $title; ?></h3>
-            <!-- //* INI ADALAH ISI KONTENT  -->
+           <h3><?php echo $title; ?></h3>
+            <!-- //* INI ADALAH ISI KONTENT akan dibuat nanti -->
+
+            <?php $this->load->view($kontenDinamsi); ?>
         </div>
     </div>
 </div>
