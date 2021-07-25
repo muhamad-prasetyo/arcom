@@ -52,9 +52,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'dashboard/index';
 $route['404_override'] = '';
 
-// route untuk form register 
+// * route untuk form register 
 $route['register'] = 'user/register';
 $route['register/proses'] = 'user/prosesRegister';
 $route['login'] = 'user/login';
 $route['login/proses'] = 'user/prosesLogin';
 $route['logout'] = 'user/logout';
+
+// * Route untuk Halaman Dashboard (SETELAH LOGIN) 
+$route['dashboard/karyawan'] = 'karyawan/index';

@@ -2,7 +2,7 @@
     <nav id="sidebar" class="bg-color">
         <ul class="menu">
             <li class="<?php echo menuAktif('dashboard'); ?>"><?php echo anchor('dashboard', 'Dashboard'); ?></li>
-            <li class="<?php echo menuAktif('karyawan'); ?>"><?php echo anchor('karyawan', 'Karyawan'); ?></li>
+            <li class="<?php echo menuAktif('karyawan'); ?>"><?php echo anchor('dashboard/karyawan', 'Karyawan'); ?></li>
             <li class="<?php echo menuAktif('gaji-&-tunjangan');?>"><?php echo anchor('dashboard/gaji-&-tunjangan', 'Gaji & Insentif'); ?></li>
             <li class="<?php echo menuAktif('absensi');?>"><?php echo anchor('dashboard/absensi', 'Absensi'); ?></li>
             <li class="<?php echo menuAktif('posisi');?>"><?php echo anchor('dashboard/posisi', 'Posisi'); ?></li>
